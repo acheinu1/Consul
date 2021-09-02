@@ -129,9 +129,6 @@ nav{
 .nav-links a{
   text-decoration: none;
   color: white;
-  /* letter-spacing: 3px; */
-  /* font-weight: bold; */
-  /* font-size: 10px; */
 }
 .burger {
   display: none;
@@ -146,6 +143,21 @@ nav{
 
 }
 /* ============navbar media query================================================================ */
+@media screen and (max-width: 1248px){
+  
+.nav-links {
+  width: 50%;
+}
+.nav-links li{
+  list-style: none;
+}
+.nav-links a{
+  text-decoration: none;
+  color: white;
+}
+
+}
+
 
 @media screen and (max-width: 768px){
   /* body{
@@ -415,6 +427,43 @@ opacity: 1;
   
 }
 
+
+/* ===================Carousel Image for Phones ================= */
+
+@media screen and (max-width: 584px){
+  .carousel-inner{
+      z-index: 0;
+      /* display: none; */
+  }
+  body{
+      background-color: #ffffff;
+      overflow-x: hidden;
+  }
+  .bg1{
+    background-image: url(https://i.postimg.cc/tTM27HK9/i-Phone-11-Pro-Max-1-1.png?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: center;
+    }
+
+  .bg2{
+      background-image: url(https://i.postimg.cc/yNnf4Rng/i-Phone-11-Pro-Max-3-1.png?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+      -webkit-background-size: cover;
+      background-size: cover;
+      background-position: center;
+      }
+
+  .bg3{
+      background-image: url(https://i.postimg.cc/5tfPRg5W/i-Phone-11-Pro-Max-4.png?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+      -webkit-background-size: cover;
+      background-size: cover;
+      background-position: center;
+      }
+    .carousel-item {
+      height: 24rem;
+    }
+  
+}
   
 
 /* ====================typewriter======================================= */
@@ -424,18 +473,13 @@ opacity: 1;
   flex-direction: column;
   justify-content: center;
   height: 100%;
-  /* padding: 0 3rem; */
   z-index: 4;
   position: absolute;
-  /* bottom: -50%; */
   margin-bottom: 25%;
   margin-left: 47%;
   overflow-x: hidden;
   color: #85BC11;
-}
-
-.title{
-  font-size: 85px;
+  position: absolute;
 }
 
 h1 img{
@@ -446,14 +490,15 @@ h1 img{
   font-family: 'Barlow', sans-serif;
   color: #85BC11;
   font-size: 68px;
-  letter-spacing: -3px;
-  position: static;
+  letter-spacing: -5px;
+  /* position: fixed; */
+  border-right: .02em solid #8ac50b7c;
 }
-
-/* Cursor */
-/* .txt-type > .txt {
-  border-right: 0.2rem solid rgb(255, 255, 255);
-} */
+@keyframes caret {
+  50% {
+    border-color: transparent;
+  }
+}
 
 @media(min-width: 1200px) {
   h1 {
@@ -496,6 +541,7 @@ h1 img{
     font-weight: 800;
     letter-spacing: -1px;
     text-align: center;
+    animation: caret 1s steps(1) infinite;
     /* position: fixed; */
   }
   .container {
@@ -544,6 +590,9 @@ h1 img{
     background-color: #85BC11; 
     color: #292828;
 }
+
+
+
 
 
 /* ==================================btn animation-====================================== */
@@ -638,80 +687,209 @@ h1 img{
   transform: translateY(-100px);
 }
 
-/* ===========================================the quote section ====================================== */
-.quotes{
-  background-color: #85BC11;
-  height: 95vh;
-  display: flex;
-}
-.quotes img{
- position: relative;
- width: 100%;
- opacity: 2;
+
+
+/* ==================================My mission media query ============================= */
+@media screen and (max-width: 1258px){ 
+  .btn-fillup.dark {
+    background: rgba(44, 248, 3, 0);
+    outline: 3px solid #85BC11;
+    color: rgb(17, 17, 17);
+    font-weight: 800;
+    margin-left: 0%;
+    margin-top: 4%;
+    width: 180px;
+    /* font-size: 18px; */
+  } 
+  }
+
+
+@media(max-width: 800px) {
+  
 }
 
-/* =================================================================================================== */
-.containerText {
+@media(max-width: 500px) {
+  .mymission{
+    display: flex;
+    width: 200px;
+    margin:7% 0;
+    align-items: center;
+}
+.missionsection p{
+  font-size: 15px;
+  line-height: 29px;
+  color: rgba(34, 33, 32, 0.623);
+}
+.missionsection{
+  padding: 10%;
+}
+.btn-fillup.dark {
+  background: rgba(44, 248, 3, 0);
+  outline: 3px solid #85BC11;
+  color: rgb(17, 17, 17);
+  font-weight: 800;
+  margin-left: 0%;
+  margin-top: 4%;
+  width: 150px;
+}
+.btn-strong-style {
+  font-family: 'LettownHills-Regular';
+  font-weight: 900;
+  font-size: 14px;
+  padding: 14px 34px;
+  border-radius: 0;
+}
+.btn-fillup:after {
+  width: 200px;
+  height: 200px;
+}
+}
+
+/* ==========================================New quote section======================================== */
+.quote_section{
+  /* background-color: black; */
+  background: #ffffff;
+  height: 90vh;
+  display: flex;
+  flex-direction: row;
+}
+.quote1 {
+  /* background-color: blue; */
+  background: #85BC11;
+  height: 80vh;
+  width: 47%;
+}
+.quote2{
+  background-color: cadetblue;
+  background: #85BC11;
+  height: 80vh;
+  width: 53%;
   position: relative;
   text-align: center;
   color: white;
-  left: 25%;
-  font-size: 16px;
+  background-image: url(/assets/Images/Group\ 23.svg);
+  background-repeat: no-repeat;
+background-size: cover;
 }
-.centered{
+.quote2 img{
+  width: 100%;
+  height: auto;
+  background-color: violet;
+}
+.quote1 img{
+  color: #111;
+  margin: 20px 0 0 50px;
+}
+.quote1 p{
+  font-size: 18px;
+  color: #fff;
+  width: 80%;
+  margin-left: 10%;
+  text-align: center;
+}
+.centerp {
   position: absolute;
-  top: 60%;
+  top: 61%;
   left: 50%;
-  transform: translate(-60%, -50%);
-  padding: 1%;
-  line-height: 40px;
-  color: #ffffffbd;
-}
-.containerText2{
-  /* position: relative; */
-  text-align: center;
-  color: white;
-  left: 25%;
-  font-size: 16px;
-}
-.centered2 {
-  position: absolute;
-  /* top: 60%; */
-  /* left: 5%; */
-  transform: translate(-60%, 10%);
-  padding-left: 66%;
-  line-height: 40px;
-  color: #ffffffbd;
-  text-align: center;
-  /* margin-left: 10%; */
-  /* width: 40%; */
+  transform: translate(-50%, -50%);
+  font-size: 20px;
+  width: 80%;
+  font-weight: 400;
 }
 
+
+/* ==================================Quote section media query ============================= */
+/* ========================================================================================== */
+
+@media(min-width: 1200px) {
+ 
+}
+
+@media(max-width: 800px) {
+  
+}
+
+@media(max-width: 500px) {
+  .quote_section{
+    flex-direction: column;
+    height: auto;
+  }
+  .quote1{
+    width: 100%;
+    padding-bottom: 10px;
+    height: auto;
+  }
+  .quote2{
+    width: 100%;
+  }
+  .centerp {
+    position: absolute;
+    top: 61%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 15px;
+    width: 90%;
+    font-weight: 400;
+    line-height: 30px;
+  }
+  .quote1 p{
+    font-size: 16px;
+    line-height: 30px;
+    
+  }
+  .quote1 img{
+    color: #111;
+    width: 130px;
+    margin: 5px 0 0 20px;
+  }
+
+  .quote2 img{
+    background-image: url(/assets/Images/Group\ 24.svg);
+    background-color: none;
+  }
+}
 
 /* ============================gallery section ================================ */
 
 .gallery{
   background-color: #ffffff;
-  height: 60vh;
+  height: 80vh;
 }
-
+.gallery img{
+  display: block;
+  margin-top: 5%;
+  margin-left: auto;
+  margin-right: auto;
+  width: 300px;
+}
 :root {
   --marquee-width: 80vw;
-  --marquee-height: 20vh;
+  --marquee-height: 40vh;
   /* --marquee-elements: 12; */ /* defined with JavaScript */
   --marquee-elements-displayed: 5;
   --marquee-element-width: calc(var(--marquee-width) / var(--marquee-elements-displayed));
   --marquee-animation-duration: calc(var(--marquee-elements) * 3s);
 }
 
+.MarqueeContainer{
+  /* background-color: black; */
+  margin-top: 5%;
+  width: 70%;
+  padding: 5%, 5%;
+  margin-left: 10%;
+}
+
 .marquee {
   width: var(--marquee-width);
   height: var(--marquee-height);
   background-color: #111;
-  color: #eee;
+  color: rgba(180, 112, 112, 0);
   overflow: hidden;
   position: relative;
+  border-radius: 20px;
+  margin-bottom: 10%;
 }
+
 .marquee:before, .marquee:after {
   position: absolute;
   top: 0;
@@ -756,7 +934,7 @@ h1 img{
 .marquee-content li img {
   width: 100%;
   /* height: 100%; */
-  border: 2px solid #eee;
+  /* border: 2px solid rgba(238, 238, 238, 0.171); */
 }
 
 @media (max-width: 600px) {
@@ -766,5 +944,401 @@ h1 img{
     --marquee-height: 16vh;
     --marquee-elements-displayed: 3;
   }
-  .marquee:before, .marquee:after { width: 5rem; }
+  .marquee:before, .marquee:after { width: 22rem; }
 }
+
+
+/* ==================================Gallery section media query ============================= */
+/* ========================================================================================== */
+
+@media(min-width: 1200px) {
+ 
+}
+
+@media(max-width: 800px) {
+  
+}
+
+@media(max-width: 500px) {
+  .gallery img{
+    /* display: block; */
+    margin-top: 20%;
+    margin-left: auto;
+    /* margin-right: auto; */
+    width: 200px;
+  }
+  :root {
+    --marquee-width: 80vw;
+    --marquee-height: 40vh;
+    /* --marquee-elements: 12; */ /* defined with JavaScript */
+    --marquee-elements-displayed: 5;
+    --marquee-element-width: calc(var(--marquee-width) / var(--marquee-elements-displayed));
+    --marquee-animation-duration: calc(var(--marquee-elements) * 3s);
+  }
+  .MarqueeContainer{
+    /* background-color: black; */
+    margin-top: 5%;
+    width: 90%;
+    padding: 5%, 5%;
+    margin-left: 10%;
+  }
+  .marquee-content li img {
+    width: 100%;
+    height: 100%;
+  }
+  .marquee-content li {
+    /* display: block; */
+    margin-top: 20px;
+    height: 200px;
+    width: 200px;
+    
+  }
+  .marquee:before {
+    left: 0;
+    background: none;
+  }
+  .marquee:after {
+    right: 0;
+    background: linear-gradient(to left, #111 0%, transparent 50%);
+  }
+}
+
+
+
+/* ==========================================CTA minimal Section================================================= */
+
+.CTA{
+  background-color: #6da007;
+  /* margin: 0px; */
+  padding: 0px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 20vh;
+  width: 100%;
+}
+
+.CTA h3{
+  color: rgb(255, 255, 255);
+  /* background-color: #8f9296; */
+  display: flex;
+  padding: 0;
+  /* margin: auto 0; */
+  position: relative;
+  /* margin-left: -150px; */
+  font-family: 'LettownHills-Regular';
+  font-size: 35px;
+  letter-spacing: -2px;
+}
+
+.CTA .btn-fillup {
+  position: relative;
+  padding: 17px 10px;
+  width: 200px;
+  margin-left: 0;
+  border: 2px solid white;
+  color: white;
+}
+.CTA .btn-fillup:hover{
+  background-color: #fff;
+  border: #fff;
+  outline: #fff;
+  color: #85BC11;
+}
+
+/*  ============================================CTA arrow======================================================== */
+.arrowCta {
+  /* display: block; */
+  height: 13px;
+  width: 13px;
+  border: 14px solid transparent;
+  transform: rotate(-45deg);
+  position: relative;
+  margin: 0.9vh 0;
+  margin-left: 90px; 
+}
+
+.arrowCta:after,
+.arrowCta:before {
+  content: "";
+  display: block;
+  height: inherit;
+  width: inherit;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.arrowCta:after {
+  border-bottom: 3px solid white;
+  border-right: 3px solid white;
+  top: 0;
+  left: 0;
+  opacity: 1;
+  animation: bottom-arrow 1.65s infinite;
+}
+
+@keyframes bottom-arrow {
+  0% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+  45% {
+    opacity: 0;
+    transform: translate(12px, 12px);
+  }
+  46% {
+    opacity: 0;
+    transform: translate(-16px, -16px);
+  }
+  90% {
+    opacity: 1;
+    transform: translate(-6px, -6px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-6px, -6px);
+  }
+}
+
+.arrowCta:before {
+  top: 0;
+  left: 0;
+  border-bottom: 3px solid white;
+  border-right: 3px solid white;
+  animation: top-arrow 1.65s infinite;
+}
+
+@keyframes top-arrow {
+  0% {
+    transform: translate(-6px, -6px);
+  }
+  35% {
+    transform: translate(0, 0);
+  }
+  90% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+
+/* ==================================Gallery section media query ============================= */
+/* ========================================================================================== */
+
+@media(min-width: 1200px) {
+ 
+}
+
+@media(max-width: 800px) {
+  
+}
+
+@media(max-width: 500px) {
+  .CTA{
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    padding: 20%;
+    margin-top: -10%;
+  }
+  .CTA h3{
+    color: rgb(255, 255, 255);
+    font-size: 25px;
+    letter-spacing: -1px;
+    text-align: center;
+  }
+  .arrowCta {
+    height: 13px;
+    width: 13px;
+    border: 14px solid transparent;
+    transform: rotate(-45deg);
+    position: relative;
+    margin: 0.9vh 0;
+    margin-left: 90px; 
+    display: none;
+  }
+}
+
+/*  ========================================FOOTER=============================================================== */
+
+/* The footer is fixed to the bottom of the page */
+
+footer {
+  position: fixed;
+  bottom: 0;
+}
+
+@media (max-height:800px) {
+  footer {
+      position: static;
+  }
+}
+
+.footer-distributed {
+  background-color: #1D1314;
+  /* box-sizing: border-box; */
+  width: 100%;
+  text-align: left;
+  font: 14px sans-serif;
+  padding: 50px 50px 60px 50px;
+  /* margin-top: 80px; */
+}
+
+.footer-distributed .footer-left, .footer-distributed .footer-center, .footer-distributed .footer-right {
+  display: inline-block;
+  vertical-align: top;
+}
+
+/* Footer left */
+
+.footer-distributed .footer-left {
+  width: 30%;
+}
+
+.footer-distributed h3 {
+  color: #ffffff;
+  font-family: 'LettownHills-Regular';
+  font-size: 28px;
+  margin: 0;
+  letter-spacing: -2px;
+}
+
+
+.footer-distributed h3 span {
+  color: #85BC11;
+  font-weight: 900;
+}
+
+/* Footer links */
+
+.footer-distributed .footer-links {
+  color: #ffffff;
+  margin: 20px 0 12px;
+}
+
+.footer-distributed .footer-links a {
+  display: inline-block;
+  line-height: 1.8;
+  text-decoration: none;
+  color: inherit;
+}
+
+.footer-distributed .footer-company-name {
+  color: #8f9296;
+  font-size: 14px;
+  font-weight: normal;
+  margin: 0;
+}
+
+/* Footer Center */
+
+.footer-distributed .footer-center {
+  width: 35%;
+}
+
+.footer-distributed .footer-center i {
+  background-color: #33383b;
+  color: #ffffff;
+  font-size: 25px;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 42px;
+  margin: 10px 15px;
+  vertical-align: middle;
+}
+
+.footer-distributed .footer-center i.fa-envelope {
+  font-size: 17px;
+  line-height: 38px;
+}
+
+.footer-distributed .footer-center p {
+  display: inline-block;
+  color: #ffffff;
+  vertical-align: middle;
+  margin: 0;
+}
+
+.footer-distributed .footer-center p span {
+  display: block;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 2;
+}
+
+.footer-distributed .footer-center p a {
+  color: #85BC11;
+  text-decoration: none;
+  ;
+}
+
+/* Footer Right */
+
+.footer-distributed .footer-right {
+  width: 30%;
+}
+
+.footer-distributed .footer-company-about {
+  line-height: 20px;
+  color: #92999f;
+  font-size: 13px;
+  font-weight: normal;
+  margin: 0;
+}
+
+.footer-distributed .footer-company-about span {
+  display: block;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.footer-distributed .footer-icons {
+  margin-top: 25px;
+}
+
+.footer-distributed .footer-icons a {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  background-color: #33383b;
+  border-radius: 2px;
+  font-size: 20px;
+  color: #ffffff;
+  text-align: center;
+  line-height: 35px;
+  margin-right: 3px;
+  margin-bottom: 5px;
+}
+
+.footer-distributed .footer-icons a:hover {
+  background-color: #85BC11;
+}
+
+.footer-links a:hover {
+  color: #85BC11;
+}
+
+@media (max-width: 880px) {
+  .footer-distributed .footer-left, .footer-distributed .footer-center, .footer-distributed .footer-right {
+      display: block;
+      width: 100%;
+      margin-bottom: 40px;
+      text-align: center;
+  }
+  .footer-distributed .footer-center i {
+      margin-left: 0;
+  }
+}       
+      
+
+      
