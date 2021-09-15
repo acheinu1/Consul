@@ -412,6 +412,20 @@ a:hover { text-decoration: none }
   }
 }
 
+@media(max-width: 760px) {
+  .article-title {
+    font-size: 1.5em;
+  }
+  .article-descrip {
+    /* font-weight: 300; */
+    font-size: 18px;
+    line-height: 1.5em;
+    margin: 0 0 1.9em 0;
+  }
+}
+
+
+
 @media screen and (min-width: 1024px) {
   .card-container {
     max-width: 75em;
