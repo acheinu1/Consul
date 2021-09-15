@@ -24,16 +24,9 @@ const navSlide = () => {
   
   navSlide();
 
-// ===========================new nav ===========================================
+// =========================== navbar ends ===========================================
 
-function openNav() {
-  document.getElementById("mySidenav").style.width = "250px";
-}
 
-function closeNav() {
-  document.getElementById("mySidenav").style.width = "0";
-}
-// ===========================new nav==========================================
 
 //   ==============================typewriter ======================================
 // ES6 Class
