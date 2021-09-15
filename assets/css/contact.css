@@ -298,7 +298,7 @@ a:hover { text-decoration: none }
 
   
   form{
-    background: rgba(27,31,34,0.80);
+    background: rgba(0, 0, 0, 0.8);
     width: 640px;
     margin: 50px auto;
     max-width: 97%;
@@ -381,7 +381,9 @@ a:hover { text-decoration: none }
     background: white;
     color: black;
   }
-  
+  .fa{
+    color: #85BC11;
+  }
   form .icons a{
     border: 1px solid white;
     border-radius: 50%;
